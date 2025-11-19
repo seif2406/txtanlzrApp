@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="txtAnalyzerApp.view.Main" />
+    <module name="txtAnalyzerApp" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\User\Downloads\openjfx-21.0.9_windows-x64_bin-sdk\javafx-sdk-21.0.9\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
