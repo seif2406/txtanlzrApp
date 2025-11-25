@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*team:Makhloufi seif eddine, dib malak, Kefsi israe lina */
 public class Main extends Application {
 
     @Override
@@ -17,7 +18,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
 
-        stage.setTitle("Text Analyzer - Sprint 1");
+        stage.setTitle("txtAnalyzer");
         stage.setScene(scene);
         stage.show();
     }

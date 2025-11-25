@@ -1,22 +1,99 @@
+/* MAIN CONFIGURATION */
 .root {
-    -fx-font-family: "Segoe UI";
-    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    /* A very soft, calming light grey/blue background */
+    -fx-background-color: #F3F4F6; 
 }
 
-.header-bar {
-    -fx-background-color: #3949ab;
-    -fx-padding: 10;
+/* HEADER SECTION */
+.header-section {
+    /* Gradient from dark indigo to soft violet */
+    -fx-background-color: linear-gradient(to bottom right, #4F46E5, #6366F1);
+    -fx-background-radius: 0 0 30 30; /* Rounds only the bottom corners */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 5);
 }
 
-.button {
-    -fx-background-color: #5c6bc0;
+.app-title {
     -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-background-radius: 8;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
 }
 
-.file-list {
-    -fx-background-color: white;
-    -fx-border-color: #c5cae9;
+/* THE MAIN BUTTON */
+.action-button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #4F46E5; /* Matches header color */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30 12 30; /* Top Right Bottom Left */
+    -fx-background-radius: 50px; /* Makes it pill-shaped */
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s;
+}
+
+.action-button:hover {
+    -fx-background-color: #EEF2FF; /* Slightly darker white on hover */
+    -fx-scale-x: 1.05; /* Grows slightly */
+    -fx-scale-y: 1.05;
+}
+
+.action-button:pressed {
+    -fx-background-color: #E0E7FF;
+    -fx-scale-x: 0.98;
+}
+
+/* CONTENT AREA */
+.content-area {
+    -fx-background-color: transparent;
+}
+
+/* CUSTOM LIST VIEW */
+.custom-list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
     -fx-padding: 10;
+    -fx-border-color: transparent;
+}
+
+/* Hiding the default scrollbar background for a cleaner look */
+.custom-list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.custom-list-view .scroll-bar .thumb {
+    -fx-background-color: #CBD5E1;
+    -fx-background-radius: 5em;
+}
+
+/* INDIVIDUAL LIST CELLS (The "Cards") */
+.list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #374151; /* Dark grey text */
+    -fx-font-size: 14px;
+    -fx-padding: 15px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+    
+    /* Creates space between items */
+    -fx-border-width: 0 0 10 0; 
+    -fx-border-color: transparent;
+}
+
+/* Alternate row colors? No, let's do Hover effects instead for a cleaner look */
+.list-cell:filled:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #4F46E5; /* Text turns purple */
+    -fx-translate-x: 5; /* Moves slightly right */
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #E0E7FF; /* Very light purple */
+    -fx-text-fill: #4338CA;
+    -fx-font-weight: bold;
+}
+
+/* Empty rows (rows with no data) */
+.list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-effect: null;
 }
